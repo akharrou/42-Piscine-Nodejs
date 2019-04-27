@@ -1,0 +1,179 @@
+<!--
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   calc.js                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 11:27:21 by akharrou          #+#    #+#             */
+/*   Updated: 2019/04/05 11:27:21 by akharrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */ -->
+
+<html lang="en">
+
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>Calculator</title>
+		<style>
+
+			body {
+
+				/* Background */
+				background: rgb(45, 167, 238);
+			}
+
+			h1 {
+
+				font-family: Arial, Helvetica, sans-serif;
+				position: relative;
+				top: 20px;
+			}
+
+			#calculator {
+
+				/* Dimensions */
+				width: 500px;
+				height: 330px;
+
+				/* Positioning */
+				margin: auto;
+				margin-top: 35vh;
+
+				/* Background */
+				background: rgb(255, 255, 255);
+
+				/* Shadow */
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			}
+
+			#input_section {
+
+				/* Positioning */
+				text-align: center;
+			}
+
+			select {
+
+				/* Dimensions */
+				width: 450px;
+				height: 50px;
+
+				/* Positioning */
+				text-indent: 210;
+			}
+
+			input {
+
+				/* Positioning */
+				margin: 15px 10px 10px 10px;
+
+				/* Dimensions */
+				width: 450px;
+				height: 50px;
+
+			}
+
+			input[type="text"] {
+
+				/* Text Input Box */
+				text-align: right;
+				caret-color: darkgray;
+				padding: 10px 10px 10px 10px;
+
+				/*  Box */
+				font-size: 25;
+				font-family: Avenir Next;
+			}
+
+			input[type="submit"] {
+
+				height: 200;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="calculator">
+			<div id="input_section">
+				<h1>Calculator</h1>
+				<input type="text">
+				<select>
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input type="text">
+				<input type="submit" value="Try Me!">
+			<div>
+		</div>
+	</body>
+
+	<script>
+		var input = $('input[type="text"]');
+		var selector = $('select');
+		var submitBtn = $('input[type="submit"]');
+
+		submitBtn.on('click', () => {
+
+			var result;
+
+			if (isNaN(input[0].value) || isNaN(input[1].value)) {
+				console.log('Error :(');
+				alert('Error :(');
+				return ;
+			}
+
+			var a = Number(input[0].value);
+			var b = Number(input[1].value);
+
+			if (a < 0 || b < 0) {
+				console.log('Error :(');
+				alert('Error :(');
+				return ;
+			}
+
+			switch (selector.val()) {
+
+				case '+':
+					result = (a + b);
+					break;
+
+				case '-':
+					result = (a - b);
+					break;
+
+				case '*':
+					result = (a * b);
+					break;
+
+				case '/':
+					if (b == 0)
+						result = 'It’s over 9000!';
+					else
+						result = (a / b);
+					break;
+
+				case '%':
+					if (b == 0)
+						result = 'It’s over 9000!';
+					else
+						result = (a % b);
+					break;
+
+				default:
+					result = 'Error :(';
+					break;
+			}
+			console.log(result.toString());
+			alert(result.toString());
+		});
+
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+	</script>
+
+</html>

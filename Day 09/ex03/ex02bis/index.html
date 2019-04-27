@@ -1,0 +1,182 @@
+<!--
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   index.html                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 11:27:21 by akharrou          #+#    #+#             */
+/*   Updated: 2019/04/05 11:27:21 by akharrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */ -->
+
+<html lang="en">
+
+	<head>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="jquery.cookie.js"></script>
+		<style>
+
+			body {
+
+				margin: 0px 0px 0px 0px;
+				background: #89b680;
+			}
+			#nav {
+
+				/* Dimensions */
+				height: 47px;
+
+				/* Positionning */
+				padding: 3px 3px 3px 3px;
+
+				/* Background */
+				background: rgb(255, 255, 255);
+				/* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+			}
+			#logo_42 {
+
+				/* Dimensions */
+				width: 35px;
+				height: 35px;
+
+				/* Positioning */
+				position: absolute;
+				top: 8.9px;
+				left: 35px;
+			}
+			h1 {
+
+				/* Font & Text */
+				font-size: 20;
+				font-family: Avenir;
+				text-align: left;
+
+				/* Positioning */
+				position: absolute;
+				top: 1px;
+				left: 95;
+			}
+			#new_task_btn {
+
+				/* Dimensions */
+				width: 165px;
+				height: 52px;
+
+				/* Positionning */
+				text-align: right;
+				position: absolute;
+				top: 0px;
+				right: 40px;
+
+				/* Featured */
+				cursor: pointer;
+
+				background: #ffffff;
+			}
+			#new_task {
+
+				/* Positionning */
+				text-align: right;
+				position: absolute;
+				top: 0px;
+				right: 60px;
+
+				/* Font */
+				font-size: 17;
+				font-family: Avenir;
+			}
+			#plusSign {
+
+				/* Font */
+				font-size: 24;
+				font-family: Avenir;
+
+				/* Positionning */
+				position: absolute;
+				top: -6px;
+				right: -34px;
+			}
+			#ft_list {
+
+				/* Dimensions */
+				width: 80vw;
+				height: 100vh;
+
+				/* Positionning */
+				padding: 2vmin 2vmin 2vmin 2vmin;
+				margin: 0px auto;
+				position: relative;
+			}
+			#task_element {
+
+				/* Dimensions */
+				width: 70vw;
+				height: 40px;
+
+				/* Positionning */
+				padding: 15px 15px 15px 15px;
+				margin: 15px auto;
+
+				/* Border */
+				border-radius: 3px;
+
+				/* Background */
+				background: white;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 5px rgba(0, 0, 0, 0.19);
+			}
+			#task_text {
+
+				/* Positionning */
+				margin: 10px 0px 0px 15px;
+
+				/* Font */
+				text-align: left;
+				font-size: 17px;
+				font-family: Avenir Next;
+			}
+			#remove_task_element {
+
+				/* Dimensions */
+				width: 40px;
+				height: 40px;
+
+				/* Positioning */
+				position: relative;
+				bottom: 32px;
+				left: 65vw;
+
+				/* Font */
+				font-size: 28px;
+				font-family: avenir;
+				color: red;
+				text-align: center;
+
+				cursor: pointer;
+			}
+
+		</style>
+		<title>Todo List</title>
+
+	</head>
+
+	<body>
+		<div id="nav">
+			<div id="logo_42">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" alt="42 Logo">
+			</div>
+			<h1>Todo List</h1>
+			<div id="new_task_btn" name="New">
+				<p id="new_task">New Task <span id="plusSign">+</span></p>
+			</div>
+		</div>
+		<div id="ft_list">
+			<hw></hw>
+		</div>
+	</body>
+
+	<script src="todo.js"></script>
+
+</html>

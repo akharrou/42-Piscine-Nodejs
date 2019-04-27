@@ -1,0 +1,69 @@
+
+
+These are the model of each db file:
+
+
+/* members.json */
+var members = [
+	{
+		type: 'MEMBER',
+
+		profile: {
+			login: '',
+			passwd: '',
+			first_name: '',
+			last_name: ''
+		},
+
+		basket: {
+			items: [{},],
+			total_items: 0,
+			total_cost: 0,
+		},
+	},
+]
+
+/* guests.json */
+var guests = [
+	{
+		type: 'GUEST',
+
+		basket: {
+			items: [{},],
+			total_items: 0,
+			total_cost: 0,
+		},
+	},
+]
+
+/* categories.json */
+var categories = [
+	{
+		type: 'CATEGORY',
+
+		category_name: '',
+		item_name_list: ['',],
+	},
+]
+
+/* items.json */
+var items = [
+	{
+		type: 'ITEM',
+
+		item_name: '',
+		categories_name_list: ['',],
+		price: 0,
+		stock: 0
+	},
+]
+
+/* archives.json */
+var archives = [
+	{
+		type: 'CHECKOUT',
+
+		user: '',
+		basket: {/* basket */}
+	},
+]

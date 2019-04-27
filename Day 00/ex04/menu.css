@@ -1,0 +1,74 @@
+
+/* CSS for 'menu.html' */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: rgb(232, 102, 47);
+}
+
+h1 {
+	color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 3vw;
+	margin: 2vw 2vw 2vw 2vw
+}
+
+.page {
+	margin: 0 auto;
+	width: 1420px;
+}
+
+#navigator {
+	margin-top: 20px;
+}
+
+#navigator ul{
+	list-style: none;
+	float: left;
+}
+
+#navigator ul a {
+
+	display: block;
+
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+
+	font-size: 2vw;
+	font-weight: 700;
+	line-height: 4vw;
+
+	padding: 0px 15px;
+}
+
+#navigator ul li {
+	position: relative;
+	float: left;
+}
+
+#navigator ul li :hover {
+	background: rgba(245, 133, 131, 0.557);
+}
+
+#navigator ul ul {
+	display: none;
+	position: absolute;
+}
+
+#navigator ul ul li {
+	width: 13vw;
+}
+
+#navigator ul ul a {
+	line-height: 2vw;
+	padding: 1.3vw 20px;
+}
+
+#navigator ul li:hover > ul {
+	display: block;
+}

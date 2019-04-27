@@ -1,0 +1,78 @@
+#items {
+    
+    margin: 10px 100px 20px 100px;
+    
+    width: 70vmin;
+    height: 15vmin;
+
+    border-radius: 6px;
+    border: 1.2px #74747454 solid;
+
+    font-size: 20px;
+}
+
+#item-pic {
+
+    border: 1.2px #74747454 solid;
+    border-radius: 1px;
+
+    margin: 0.7vmin 0.7vmin 2vmin 0.7vmin;
+    width: 19%;
+    float: left;
+}
+
+#item-text {
+
+    border: 1.2px #74747454 solid;
+    border-radius: .5px;
+
+    align-content: flex-end;
+
+    margin: 7px 0px 0px 7px;
+    height: 90%;
+}
+
+
+#quantity {
+    float: right;
+    margin-top: 9%;
+    margin-right: 30px;
+    width: 35px;
+}
+
+#checkout {
+    position: fixed;
+    border-radius: 2px;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    height: 75px;
+    color: white;
+    background-color: rgb(37, 202, 37);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 4vmin;
+} 
+
+#button {
+    float: right;
+    width: 20vmin;
+    height: 75px;
+
+    background-color: #000000;
+
+    border-radius: 2px;
+    border-color: #000000;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2vmin;
+    text-align: center;
+}
+
+#basket-text {
+    float: left;
+}

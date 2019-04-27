@@ -1,0 +1,80 @@
+<!--
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ballon.html                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 11:27:21 by akharrou          #+#    #+#             */
+/*   Updated: 2019/04/05 11:27:21 by akharrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */ -->
+
+ <html lang="en">
+	<head>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>Ballon</title>
+		<style>
+
+			#ballon {
+
+				/* Dimensions */
+				width: 200px;
+				height: 200px;
+
+				/* Positioning */
+				margin: auto;
+				margin-top: 35vh;
+
+				/* Background & Border */
+				background: red;
+				border-radius: 1000px;
+
+				/* Make it Look Clickable */
+				cursor: pointer;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<div id="ballon"></div>
+	</body>
+
+	<script>
+
+		var Ballon = $('#ballon');
+		var colors = ['green', 'blue', 'red'];
+		var i = 0;
+
+		Ballon.on('click', function() {
+
+			Ballon.css('background', colors[i % 3]);
+			++i;
+
+			if (Ballon.width() < 420) {
+				Ballon.width(Ballon.width() + 10);
+				Ballon.height(Ballon.height() + 10);
+			} else {
+				Ballon.width(200);
+				Ballon.height(200);
+			}
+		});
+
+		Ballon.on("mouseleave", function() {
+
+			Ballon.css('background', colors[Math.abs(i % 3)]);
+			--i;
+
+			if (Ballon.width() > 200) {
+				Ballon.width(Ballon.width() - 5);
+				Ballon.height(Ballon.height() - 5);
+			}
+		});
+
+	</script>
+
+</html>

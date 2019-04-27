@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   www                                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/31 12:34:11 by akharrou          #+#    #+#             */
+/*   Updated: 2019/03/31 12:34:11 by akharrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* Module Dependencies */
+var app = require('../app');
+var http = require('http');
+
+/* Set Port */
+var PORT = 8080;
+app.set('port', '8080');
+
+/* Create the HTTP server. */
+var server = http.createServer(app);
+
+/* Start the Server */
+server.listen(PORT, () => {
+	console.log("Server Status: [LIVE]");
+	console.log(`Server running at 'http://localhost:${PORT}/'`);
+});

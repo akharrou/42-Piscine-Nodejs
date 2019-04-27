@@ -1,0 +1,14 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles the representation of a point in space.
+
+An instance can be contructed from an array of the following consecutive
+parameters: an X axis coordinate, Y axis coordinate, Z depth coordinate
+optionally a homogenous W coordinate and an RGB Color (Color class):
+new Vertex( [ x=1.00, y=1.00, z=1.00, w=1.00, new Color([red=255, green=255, blue=255]) ] );
+
+X, Y, Z, W as well as Red, green, blue constitutives and RGB values are
+converted to intergers. Negative or > to 255 color constitutives are left
+as is. Any other use is undefined behaviour.
+
+The class provides no methods.
+---------------------------------------------------------------------- Vertex ->

@@ -1,0 +1,213 @@
+
+/* CSS for 'doft.html' */
+
+
+body {
+    background-color: #505050;
+    margin: 18px 0 0 8px;
+}
+
+/* — — — — — — Main Div — — — — — — */
+
+.page {
+    margin: auto;
+    width: 1460px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1420px;
+}
+
+/* — — — — — — Parent — — — — — — */
+
+.box {
+    border-radius: 9px;
+    box-shadow: 10px 10px 10px #000000;
+}
+
+/* — — — — Box BG Color — — — — */
+
+.green {
+	background: #76ef84
+}
+
+.grey {
+    background-color: #909090;
+}
+
+/* — — — — — — Types — — — — — — */
+
+.banner {
+    height: 137px;
+    position: relative;
+}
+
+.side {
+    width: 110px;
+    height: 410px;
+    margin: 30px 0 0 30px;
+    padding: 32px 0 0 32px;
+    float: left;
+}
+
+.middle {
+	margin: 30px 0 0 30px;
+    width: 1020px;
+    height: 582px;
+    float: left;
+}
+
+.bottom {
+
+	width: 520px;
+    height: 180px;
+
+	position: absolute;
+    top: 680px;
+    right: -50;
+    padding: 10px;
+    font-family: arial;
+    font-size: 16.5px;
+    letter-spacing: 1px;
+}
+
+/* — — — — — — Images — — — — — — */
+
+img.day_of_42 {
+
+    width: 500px;
+	height: 115px;
+
+	border-radius: 10px;
+	position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+img.search {
+
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+img.refresh {
+
+    height: 20px;
+	width: 20px;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+img.delete {
+
+    height: 20px;
+	width: 20px;
+
+    position: absolute;
+    right: 10px;
+	bottom: 10px;
+}
+
+img.left {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 6px;
+	display: flex;
+}
+
+img.select {
+    border: 5px solid red;
+    margin: -5px 0 1px -5px;
+    border-radius: 5px;
+}
+
+img.cluster {
+    margin: 10px;
+    width: 1000px;
+    height: 562px;
+}
+
+img.book {
+	width: 70px;
+	height: 100px;
+
+}
+
+img.towel {
+	width: 70px;
+	height: 50px;
+}
+
+img.wall {
+	display: flex;
+
+	background-image: url("resources/brick.jpg");
+}
+
+.wall {
+    background-image: url('resources/brick.jpg');
+    margin: 5px 0 0 -20px;
+    height: 70px;
+    width: 120px;
+  }
+
+.input_box {
+
+	width: 370px;
+	height: 18px;
+
+	border-top-color: #eeeeee;
+}
+
+.button {
+
+	font-size: 13.2px;
+	font-family: Helvetica;
+
+	width: 76px;
+    height: 23px;
+
+	border: 1px solid #a8a4a5;
+    border-radius: 2px;
+    background-color: #f4eff3;
+}
+
+/* — — — — — — Movemenets — — — — — — */
+
+.moveimage_by_5
+{
+	position: relative;
+	top: 5px;
+}
+
+.moveimage_by_10
+{
+	position: relative;
+	top: 10px;
+}
+
+.moveimage_by_15
+{
+	position: relative;
+	top: 15px;
+}
+
+
+/* — — — — — — Text Styles — — — — — — */
+
+.big {
+    font-family: Times;
+	font-size: 31px;
+}
+
+.shadow {
+    text-shadow: 5px 5px 5px #ff0000;
+}
+
+.italic {
+	font-style: italic;
+}

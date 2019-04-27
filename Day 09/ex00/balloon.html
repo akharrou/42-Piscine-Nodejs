@@ -1,0 +1,83 @@
+<!--
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ballon.html                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 11:27:21 by akharrou          #+#    #+#             */
+/*   Updated: 2019/04/05 11:27:21 by akharrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */ -->
+
+ <html lang="en">
+	<head>
+
+		<title>Ballon</title>
+		<style>
+
+			#ballon {
+
+				/* Dimensions */
+				width: 200px;
+				height: 200px;
+
+				/* Positioning */
+				margin: auto;
+				margin-top: 35vh;
+
+				/* Background & Border */
+				background: red;
+				border-radius: 1000px;
+
+				/* Make it Look Clickable */
+				cursor: pointer;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<div id="ballon"></div>
+	</body>
+
+	<script>
+
+/* — — — — — Everything here gets ran once and keeps it value — — — — —  */
+
+		var Ballon = document.getElementById('ballon');
+		var colors = ['green', 'blue', 'red'];
+		var i = 0;
+
+/* — — — — — Everything here gets ran once and keeps it value — — — — —  */
+
+		Ballon.addEventListener("click", () => {
+
+			Ballon.style.background = colors[i % 3];
+			++i;
+
+			if (Ballon.clientHeight < 420) {
+				Ballon.style.width = Ballon.clientWidth + 10;
+				Ballon.style.height = Ballon.clientHeight + 10;
+			} else {
+				Ballon.style.width = 200;
+				Ballon.style.height = 200;
+			}
+		});
+
+		Ballon.addEventListener("mouseleave", () => {
+
+			Ballon.style.background = colors[Math.abs(i % 3)];
+			--i;
+
+			if (Ballon.clientHeight > 200) {
+				Ballon.style.width = Ballon.clientWidth - 5;
+				Ballon.style.height = Ballon.clientHeight - 5;
+			}
+		});
+
+	</script>
+
+</html>

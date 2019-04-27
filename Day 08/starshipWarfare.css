@@ -1,0 +1,39 @@
+
+/* CSS */
+body {
+    background-color: #888888;
+    margin: 18px 0 0 8px;
+}
+
+.myCanvas {
+    background-color:yellow;
+    color: red;
+}
+
+.board {
+    border-radius: 6px;
+    border: 6px solid blue;
+    background-color: rgb(0, 238, 255);
+    position: absolute;
+    right: 20%;
+}
+
+.speedButton {
+
+    color: rgb(241, 241, 241);
+    font-size: 19px;
+    line-height: 19px;
+    padding: 13px;
+    border-radius: 21px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164);
+    display: inline-block;}
+.speedButton:hover {
+    background: #1C6EA4; }
+.speedButton:active {
+    background: #144E75; }
