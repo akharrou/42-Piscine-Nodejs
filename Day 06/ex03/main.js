@@ -42,7 +42,6 @@ console.log(`${M}`);
 
 vtxA = new Vertex( new Array(1.0, 1.0, 0.0));
 console.log(`${vtxA}`);
-console.log(`${M}`);
 
 vtxB = M.transformVertex(vtxA);
 console.log(`${vtxB}`);

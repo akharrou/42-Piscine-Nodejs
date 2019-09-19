@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 18:45:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/04/26 18:40:05 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/09/18 21:51:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Matrix {
 
 		if (argv[0] == Matrix.SET)
 			var matrix = argv[1];
-
 
 		if (argv[0] == Matrix.IDENTITY) {
 			var matrix =  [
@@ -138,14 +137,12 @@ class Matrix {
 		var row = 0;
 		var col = 0;
 		var i = 0;
-		for (row = 0; row < 4; ++row) {
-			for (col = 0; col < 4; ++col) {
-				for (i = 0; i < 4; ++i) {
+		for (row = 0; row < 4; ++row)
+			for (col = 0; col < 4; ++col)
+				for (i = 0; i < 4; ++i)
 					new_matrix[row][col] += this.matrix[row][i] * rhs.matrix[i][col];
-				}
-			}
-		}
-		return (new Matrix(Matrix.SET, new_matrix));
+
+		return (new Matrix([Matrix.SET, new_matrix]));
 	}
 
 	/* Takes a vertex; returns a new Vertex that is the result of the multiplication of one vertex with another */
@@ -171,14 +168,14 @@ w | ${this.matrix[3][0].toFixed(2).padEnd(4, ' ')} | ${this.matrix[3][1].toFixed
 	};
 };
 
-Matrix.IDENTITY = 'IDENTITY';
-Matrix.SCALE = 'SCALE preset';
-Matrix.RX = 'Ox ROTATION preset';
-Matrix.RY = 'Oy ROTATION preset';
-Matrix.RZ = 'Oz ROTATION preset';
+Matrix.IDENTITY    = 'IDENTITY';
+Matrix.SCALE       = 'SCALE preset';
+Matrix.RX          = 'Ox ROTATION preset';
+Matrix.RY          = 'Oy ROTATION preset';
+Matrix.RZ          = 'Oz ROTATION preset';
 Matrix.TRANSLATION = 'TRANSLATION preset';
-Matrix.PROJECTION = 'PROJECTION preset';
-Matrix.SET = '';
+Matrix.PROJECTION  = 'PROJECTION preset';
+Matrix.SET         = 'SET';
 
 Matrix.verbose = false;
 
